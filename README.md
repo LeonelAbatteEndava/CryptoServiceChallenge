@@ -12,6 +12,13 @@ La URL que usaremos en nuestra app será la siguiente:
 
 "https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
 
+```shell
+
+curl --location --request GET 'https://sandbox-api.coinmarketcap.com/v2/tools/price-conversion?symbol=USD&convert=BTC&amount=1.0' \
+--header 'X-CMC_PRO_API_KEY: b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c' \
+--header 'Accept: */*'
+
+```
 A la cual le podremos agregar los parametros a obtener según la moneda que querramos visualizar, esto parametros son:
 
 Symbol: Criptomenda de la cual queremos saber la cotizacion
@@ -19,6 +26,8 @@ Convert: Moneda en la cual queremos ver la conversion de la criptomoneda
 Amount: Monto de cryptomoneda a convertir
 
 Con esta consulta la query nos devolverá un JSON con los siguientes datos:
+
+```json
 
 {
     "status": {
@@ -45,3 +54,6 @@ Con esta consulta la query nos devolverá un JSON con los siguientes datos:
         }
     }
 }
+
+```
+Se importa la coleccion de Postman como JSON, la misma se encuentra guardada en el repositorio
