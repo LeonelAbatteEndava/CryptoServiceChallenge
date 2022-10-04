@@ -146,4 +146,4 @@ Esta capa representa a todas las vistas que terminan diseñando la interfaz de u
 
 El diagrama de la arquitectura es el siguiente:
 
-![Alt text](relative/path/to/img.jpg?raw=true "Diagrama")
+![Alt text](https://github.com/LeonelAbatteEndava/CryptoServiceChallenge/blob/feature/MOB-19-GenerateDocumentation/Diagram.png "Diagrama")
