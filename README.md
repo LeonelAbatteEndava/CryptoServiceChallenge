@@ -122,3 +122,28 @@ All the tests must be completed with an OK.
 It must not exist style errors (Static analysis of code) 
 It must pass the Code Review from Technical Lead  
 It must be seen by the PO (Product Owner) 
+
+Arquitectura
+
+Para nuestro proyecto utlizaremos la arquitectura MVVM incorporando Clean Architecture y customizando algunas capas.
+
+Una de las formas mas comunes de modularizar la arquitectura es separarlo en 3 grandes capas: Presentation, Domain y Data, abajo se detallará la funcion de cada una:
+
+Data
+
+Contiene implementaciones de repositorio(*) y todas las fuentes de datos, entre ellos el Api Data Source, Room Data Source y el Location Data Source
+
+(*) El repositorio se encuentra en medio de la capa de Domain y Data, ya que si bien es el encargado de combinar las multiples fuentes de datos, tambien es el encargado de implementar la interfaz creada por el Domain (UseCases)
+
+Domain
+
+En esta capa encontramos los UseCases y los Models (Entitys), asi como tambien las interfaces de repositorio, los casos de uso combinan datos de 1 o varias interfaces del repositorio. En esta capa se aplican las reglas de negocio del proyecto
+
+Presentation
+
+Esta capa representa a todas las vistas que terminan diseñando la interfaz de usuario, toma algunos datos en forma de algunos modelos de vista y los presenta en pantalla, estas estan definidas en View y ViewModel, y se puede utilizar solo View en el caso de utilizar SwiftUI
+
+
+El diagrama de la arquitectura es el siguiente:
+
+![Alt text](https://github.com/LeonelAbatteEndava/CryptoServiceChallenge/blob/feature/MOB-19-GenerateDocumentation/Diagram.png "Diagrama")
