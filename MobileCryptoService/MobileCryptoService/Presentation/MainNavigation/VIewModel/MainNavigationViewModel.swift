@@ -10,10 +10,11 @@ import Foundation
 
 class MainNavigationViewModel: ObservableObject{
     
-    @Published var state: MainNavigationState = InitialState()
+    @Published var state: MainNavigationState
+
     
-    func onInitialEvent(){
-        state = WaitingState()
+    init(initialState: MainNavigationState){
+        state = initialState
     }
     
     func onTimerFinished(){

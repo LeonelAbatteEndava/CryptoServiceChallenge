@@ -12,8 +12,6 @@ class MainNavigationState{}
 
 class InitialState: MainNavigationState {}
 
-class WaitingState: MainNavigationState {}
-
 class HomeState: MainNavigationState {}
 
 

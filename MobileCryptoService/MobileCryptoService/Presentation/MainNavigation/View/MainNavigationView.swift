@@ -12,25 +12,24 @@ struct MainNavigationView: View  {
     @ObservedObject var mainNavigationViewModel: MainNavigationViewModel
     
     var body: some View {
-        
-        if (mainNavigationViewModel.state is InitialState || mainNavigationViewModel.state is WaitingState) {
-            SplashScreenView()
-        
+
+        switch mainNavigationViewModel.state{
+            case is InitialState:
+                SplashScreenView(onAnimationFinished: {
+                    mainNavigationViewModel.onTimerFinished()
+                })
+            case is HomeState:
+                HomeView()
+            default:
+                Text("Error")
         }
-        
-/*        switch mainNavigationViewModel.state{
-        case is InitialState, is WaitingState:
-            SplashScreenView()
-        case is HomeState:
-            Text("Home")
-        default:
-            Text("Error")
-        }*/
     }
 }
 
 struct MainNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        MainNavigationView(mainNavigationViewModel: MainNavigationViewModel())
+        MainNavigationView(mainNavigationViewModel: MainNavigationViewModel(initialState: InitialState()))
+        MainNavigationView(mainNavigationViewModel: MainNavigationViewModel(initialState: HomeState()))
+                           
     }
 }

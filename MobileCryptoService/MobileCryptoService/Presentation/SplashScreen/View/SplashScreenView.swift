@@ -8,21 +8,31 @@
 import SwiftUI
 
 struct SplashScreenView: View {
+
+    let onAnimationFinished: ()->Void
     
     var body: some View {
-        VStack{
-            ZStack{
-                Color("SplashScreenBackground")
-                    .edgesIgnoringSafeArea(.all)
-                Image("SplashScreen")
+       VStack{
+           ZStack{
+               Color("SplashScreenBackground")
+                   .edgesIgnoringSafeArea(.all)
+                    Image("SplashScreen")
+            }}
+            .onAppear() {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    onAnimationFinished()
+                }
             }
-        }
     }
 }
 
 struct SplashScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SplashScreenView()
-        SplashScreenView()
+        SplashScreenView(onAnimationFinished: {
+            
+        })
+        SplashScreenView(onAnimationFinished: {
+            
+        })
     }
 }

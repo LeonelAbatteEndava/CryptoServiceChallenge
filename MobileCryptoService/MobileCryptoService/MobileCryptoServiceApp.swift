@@ -11,7 +11,7 @@ import SwiftUI
 struct MobileCryptoServiceApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashScreenView2()
+            MainNavigationView(mainNavigationViewModel: MainNavigationViewModel(initialState: InitialState()))
         }
     }
 }
