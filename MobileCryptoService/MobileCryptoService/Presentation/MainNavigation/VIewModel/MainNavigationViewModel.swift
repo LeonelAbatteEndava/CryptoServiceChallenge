@@ -10,7 +10,7 @@ import Foundation
 
 class MainNavigationViewModel: ObservableObject{
     
-    @Published var state: MainNavigationState = HomeState()
+    @Published var state: MainNavigationState = InitialState()
     
     func onInitialEvent(){
         state = WaitingState()

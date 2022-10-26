@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    //@StateObject var mainNavigationViewModel = MainNavigationViewModel()
+
+    
     var body: some View {
-        VStack {
-            SplashScreenView()
-        }
+//        MainNavigationView(mainNavigationViewModel: mainNavigationViewModel)
+        Text("Home")
     }
 }
 

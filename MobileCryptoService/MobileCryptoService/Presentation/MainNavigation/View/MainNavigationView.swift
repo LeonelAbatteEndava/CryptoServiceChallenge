@@ -12,14 +12,20 @@ struct MainNavigationView: View  {
     @ObservedObject var mainNavigationViewModel: MainNavigationViewModel
     
     var body: some View {
-        switch mainNavigationViewModel.state{
+        
+        if (mainNavigationViewModel.state is InitialState || mainNavigationViewModel.state is WaitingState) {
+            SplashScreenView()
+        
+        }
+        
+/*        switch mainNavigationViewModel.state{
         case is InitialState, is WaitingState:
             SplashScreenView()
         case is HomeState:
             Text("Home")
         default:
             Text("Error")
-        }
+        }*/
     }
 }
 
