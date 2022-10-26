@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DBF521F28F73C8F00A1476B /* MobileCryptoServiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF521E28F73C8F00A1476B /* MobileCryptoServiceApp.swift */; };
+		2DBF522328F73C9200A1476B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBF522228F73C9200A1476B /* Assets.xcassets */; };
+		2DBF522628F73C9200A1476B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBF522528F73C9200A1476B /* Preview Assets.xcassets */; };
+		2DBF523C290068E000A1476B /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF523B290068E000A1476B /* SplashScreenView.swift */; };
+		DB7042E92909C30700FA5FA1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7042E82909C30700FA5FA1 /* HomeView.swift */; };
+		DBED7A1728F9FAA300F826B3 /* MainNavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED7A1628F9FAA300F826B3 /* MainNavigationViewModel.swift */; };
+		DBED7A1928F9FAB400F826B3 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED7A1828F9FAB400F826B3 /* States.swift */; };
+		DBED7A1D28F9FB7600F826B3 /* MainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED7A1C28F9FB7600F826B3 /* MainNavigationView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2DBF521B28F73C8F00A1476B /* MobileCryptoService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileCryptoService.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DBF521E28F73C8F00A1476B /* MobileCryptoServiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCryptoServiceApp.swift; sourceTree = "<group>"; };
+		2DBF522228F73C9200A1476B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DBF522528F73C9200A1476B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2DBF523928F88C9600A1476B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2DBF523B290068E000A1476B /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		DB7042E82909C30700FA5FA1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DBED7A1628F9FAA300F826B3 /* MainNavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewModel.swift; sourceTree = "<group>"; };
+		DBED7A1828F9FAB400F826B3 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
+		DBED7A1C28F9FB7600F826B3 /* MainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DBF521828F73C8F00A1476B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DBF521228F73C8F00A1476B = {
+			isa = PBXGroup;
+			children = (
+				2DBF523928F88C9600A1476B /* .gitignore */,
+				2DBF521D28F73C8F00A1476B /* MobileCryptoService */,
+				2DBF521C28F73C8F00A1476B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DBF521C28F73C8F00A1476B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF521B28F73C8F00A1476B /* MobileCryptoService.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DBF521D28F73C8F00A1476B /* MobileCryptoService */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF522C28F84EE300A1476B /* Data */,
+				2DBF522D28F84EFD00A1476B /* Domain */,
+				2DBF522E28F84F0E00A1476B /* Presentation */,
+				2DBF521E28F73C8F00A1476B /* MobileCryptoServiceApp.swift */,
+				2DBF522228F73C9200A1476B /* Assets.xcassets */,
+				2DBF522428F73C9200A1476B /* Preview Content */,
+			);
+			path = MobileCryptoService;
+			sourceTree = "<group>";
+		};
+		2DBF522428F73C9200A1476B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF522528F73C9200A1476B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2DBF522C28F84EE300A1476B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF522F28F8502100A1476B /* ApiDataSource */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2DBF522D28F84EFD00A1476B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF523228F8504700A1476B /* UseCases */,
+				2DBF523128F8503B00A1476B /* Repository */,
+				2DBF523328F8505200A1476B /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2DBF522E28F84F0E00A1476B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DB7042EA2909C33100FA5FA1 /* Widgets */,
+				DB7042E52909C2D400FA5FA1 /* HomeScreen */,
+				DBED7A1328F9FA7000F826B3 /* MainNavigation */,
+				2DBF523428F8508300A1476B /* SplashScreen */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2DBF522F28F8502100A1476B /* ApiDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF523028F8502D00A1476B /* Entities */,
+			);
+			path = ApiDataSource;
+			sourceTree = "<group>";
+		};
+		2DBF523028F8502D00A1476B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2DBF523128F8503B00A1476B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2DBF523228F8504700A1476B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		2DBF523328F8505200A1476B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2DBF523428F8508300A1476B /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF523628F850D100A1476B /* ViewModel */,
+				2DBF523528F850BE00A1476B /* View */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		2DBF523528F850BE00A1476B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF523B290068E000A1476B /* SplashScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DBF523628F850D100A1476B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB7042E52909C2D400FA5FA1 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DB7042E72909C2E900FA5FA1 /* ViewModel */,
+				DB7042E62909C2DE00FA5FA1 /* View */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		DB7042E62909C2DE00FA5FA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB7042E82909C30700FA5FA1 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB7042E72909C2E900FA5FA1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB7042EA2909C33100FA5FA1 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		DBED7A1328F9FA7000F826B3 /* MainNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				DBED7A1528F9FA8400F826B3 /* VIewModel */,
+				DBED7A1428F9FA7A00F826B3 /* View */,
+			);
+			path = MainNavigation;
+			sourceTree = "<group>";
+		};
+		DBED7A1428F9FA7A00F826B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBED7A1C28F9FB7600F826B3 /* MainNavigationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DBED7A1528F9FA8400F826B3 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DBED7A1628F9FAA300F826B3 /* MainNavigationViewModel.swift */,
+				DBED7A1828F9FAB400F826B3 /* States.swift */,
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DBF521A28F73C8F00A1476B /* MobileCryptoService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DBF522928F73C9200A1476B /* Build configuration list for PBXNativeTarget "MobileCryptoService" */;
+			buildPhases = (
+				2DBF521728F73C8F00A1476B /* Sources */,
+				2DBF521828F73C8F00A1476B /* Frameworks */,
+				2DBF521928F73C8F00A1476B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileCryptoService;
+			productName = MobileCryptoService;
+			productReference = 2DBF521B28F73C8F00A1476B /* MobileCryptoService.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DBF521328F73C8F00A1476B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					2DBF521A28F73C8F00A1476B = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 2DBF521628F73C8F00A1476B /* Build configuration list for PBXProject "MobileCryptoService" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DBF521228F73C8F00A1476B;
+			productRefGroup = 2DBF521C28F73C8F00A1476B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DBF521A28F73C8F00A1476B /* MobileCryptoService */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DBF521928F73C8F00A1476B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBF522628F73C9200A1476B /* Preview Assets.xcassets in Resources */,
+				2DBF522328F73C9200A1476B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DBF521728F73C8F00A1476B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBED7A1928F9FAB400F826B3 /* States.swift in Sources */,
+				DBED7A1D28F9FB7600F826B3 /* MainNavigationView.swift in Sources */,
+				DBED7A1728F9FAA300F826B3 /* MainNavigationViewModel.swift in Sources */,
+				DB7042E92909C30700FA5FA1 /* HomeView.swift in Sources */,
+				2DBF521F28F73C8F00A1476B /* MobileCryptoServiceApp.swift in Sources */,
+				2DBF523C290068E000A1476B /* SplashScreenView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2DBF522728F73C9200A1476B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DBF522828F73C9200A1476B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DBF522A28F73C9200A1476B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MobileCryptoService/Preview Content\"";
+				DEVELOPMENT_TEAM = DFTH255W4Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.endava.MobileCryptoService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DBF522B28F73C9200A1476B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MobileCryptoService/Preview Content\"";
+				DEVELOPMENT_TEAM = DFTH255W4Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.endava.MobileCryptoService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DBF521628F73C8F00A1476B /* Build configuration list for PBXProject "MobileCryptoService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBF522728F73C9200A1476B /* Debug */,
+				2DBF522828F73C9200A1476B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DBF522928F73C9200A1476B /* Build configuration list for PBXNativeTarget "MobileCryptoService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBF522A28F73C9200A1476B /* Debug */,
+				2DBF522B28F73C9200A1476B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DBF521328F73C8F00A1476B /* Project object */;
+}
