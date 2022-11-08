@@ -9,28 +9,38 @@ import SwiftUI
 
 struct CryptoCard: View {
     var body: some View {
-        ZStack{
-            Rectangle().fill(.white).frame(width: 343, height: 88)
+        VStack{
+            Spacer().frame(maxWidth: .infinity, maxHeight: .infinity).layoutPriority(15)
             HStack{
-                Image("ImageBTC")
-                    .padding(12)
-                    .background(Color("BackgroundColor"))
-                    .cornerRadius(12)
+                Spacer().layoutPriority(15)
+                Image("ImageBTC").frame(maxWidth: .infinity,maxHeight: .infinity).layoutPriority(64)
                 VStack{
-                    Text("BTC/BUSD")
-                    Text("Bitcoin")
-                }
-                VStack{
-                    Text("ARS 54.382,64")
-                    SmallButton(ButtonText3: "15,3%")
-                }
-            }
-        }.frame(width: 343, height: 88)
+                    HStack{
+                        VStack{
+                            
+                        }.frame(maxWidth: .infinity,maxHeight: .infinity)
+                        VStack{
+                            
+                        }.frame(maxWidth: .infinity,maxHeight: .infinity).background(.blue)
+                    }
+                }.frame(maxWidth: .infinity,maxHeight: .infinity).layoutPriority(248)
+                    .background(.red)
+                Spacer().frame(maxWidth: .infinity,maxHeight: .infinity).layoutPriority(15)
+            }.frame(maxWidth: .infinity,maxHeight: .infinity).layoutPriority(60)
+            Spacer().frame(maxWidth: .infinity,maxHeight: .infinity).layoutPriority(15)
+        }
+        .cornerRadius(10) /// make the background rounded
+        .overlay( /// apply a rounded border
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(.white, lineWidth:5)
+                .shadow(radius: 10)
+        )
+        .background(Color.white)
     }
 }
 
 struct CryptoCard_Previews: PreviewProvider {
     static var previews: some View {
-        CryptoCard()
+        CryptoCard().frame(width: 343, height: 88)
     }
 }
