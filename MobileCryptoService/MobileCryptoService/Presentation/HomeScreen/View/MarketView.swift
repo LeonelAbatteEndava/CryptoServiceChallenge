@@ -17,21 +17,26 @@ struct MarketView: View {
                     Image("SmallProfilePhoto")
                     Text("Good morning, \nJosé")
                         .font(.custom("Mulish-Bold", size: 20))
-                }.padding()
+                    Spacer()
+                }
                 Text("Currency Selection")
                     .font(.custom("Mulish-Bold", size: 20))
                 CryptoButtons(ButtonText1: "ARS", ButtonText2: "USD")
-                Text("Watchlist")
-                    .font(.custom("Mulish-SemiBold", size: 14))
-                    .multilineTextAlignment(.leading)
-                CryptoCard()
-                CryptoCard()
-                CryptoCard()
-                CryptoCard()
-                CryptoCard()
+                HStack{
+                    Text("Watchlist")
+                        .font(.custom("Mulish-SemiBold", size: 14))
+                    Spacer()
+                }.padding(.bottom, 8)
+                VStack(spacing: 8) {
+                    CryptoCard()
+                    CryptoCard()
+                    CryptoCard()
+                    CryptoCard()
+                    CryptoCard()
+                    Spacer()
+                }.padding(.top, 0)
                 Spacer()
-                    
-            }
+            }.padding()
             
         }
 

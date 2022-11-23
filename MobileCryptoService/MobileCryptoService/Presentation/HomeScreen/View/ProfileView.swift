@@ -13,27 +13,26 @@ struct ProfileView: View {
             Color("BackgroundColor")
                 .edgesIgnoringSafeArea(.all)
             VStack{
+
                 Image("ProfilePhoto")
-                    .padding(.top, 124)
-                    .padding(.bottom, 32)
+                    .padding()
                 Text("Jose Perez")
                     .font(.custom("Mulish-SemiBold", size: 25))
                     .bold()
-                    .padding(.bottom, 14)
+                    .padding()
                 Text("33 Years old")
                     .font(.custom("Mulish-SemiBold", size: 25))
-                    .padding(14)
+                    .padding()
                 Text("Engineer")
                     .font(.custom("Mulish-SemiBold", size: 25))
-                    .padding(14)
+                    .padding()
                 Text("CABA, Buenos Aires, Argentina")
                     .font(.custom("Mulish-SemiBold", size: 25))
-                    .padding(14)
-                GreenButton(ButtonText1: "View in GitHub")
-                    .padding(.top, 122)
-                    .padding(.bottom,  200)
+                    .padding()
                 Spacer()
-            }
+                GreenButton(ButtonText1: "View in GitHub")
+                Spacer()
+            }.padding()
         }
     }
 }
