@@ -7,16 +7,19 @@
 
 import SwiftUI
 
-struct CryptoButtons: View {
 
-    var ButtonText1: String
-    var ButtonText2: String
+struct CryptoButtons<T>: View {
+
+    var buttonText1: T
+    var buttonText2: T
+    
+    var getButtonString: ((T) -> String)
     
     var body: some View {
             HStack {
-                GreenButton(ButtonText1: ButtonText1)
+                GreenButton(buttonText1: getButtonString(buttonText1))
                     .padding(13)
-                WhiteButton(ButtonText2: ButtonText2)
+                WhiteButton(buttonText2: getButtonString(buttonText2))
                     .padding(13)
                 
             }
@@ -24,13 +27,13 @@ struct CryptoButtons: View {
 }
 
 struct GreenButton: View {
-    var ButtonText1: String
+    var buttonText1: String
     
     var body: some View {
         Button(action: {
             print("Hola")
         }) {
-            Text(ButtonText1)
+            Text(buttonText1)
                 .bold()
                 .foregroundColor(Color("TextColor1"))
         }
@@ -44,11 +47,11 @@ struct GreenButton: View {
 }
 
 struct WhiteButton: View {
-    var ButtonText2: String
+    var buttonText2: String
     
     var body: some View {
         Button(action: { print("HOLA")}){
-            Text(ButtonText2)
+            Text(buttonText2)
                 .bold()
                 .foregroundColor(Color("TextColor2"))
         }
@@ -61,13 +64,13 @@ struct WhiteButton: View {
 }
 
 struct SmallButton: View {
-    var ButtonText3: String
+    var buttonText3: String
     
     var body: some View {
         Button(action: {
             print("Hola")
         }) {
-            Text(ButtonText3)
+            Text(buttonText3)
                 .bold()
                 .foregroundColor(Color("TextColor3"))
                 .font(.custom("Mulish-Bold" ,size: 10))
@@ -84,6 +87,8 @@ struct SmallButton: View {
 
 struct CryptoButtons_Previews: PreviewProvider {
     static var previews: some View {
-        CryptoButtons(ButtonText1: "View In Github", ButtonText2: "Dark Button")
+        CryptoButtons<String>(buttonText1: "View In Github", buttonText2: "Dark Button", getButtonString: { item in
+                return item
+        } )
     }
 }
