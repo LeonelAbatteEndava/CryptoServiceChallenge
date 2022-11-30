@@ -21,9 +21,12 @@ struct MarketView: View {
                 }
                 Text("Currency Selection")
                     .font(.custom("Mulish-Bold", size: 20))
-                CryptoButtons(buttonText1: "ARS", buttonText2: "USD", getButtonString: { item in
-                    return item
-                })
+                CryptoButtons(elementList: ["ARS","USD"],
+                              isSelected:{ item in
+                                return true},
+                getButtonString: { item in
+                                return item
+                                })
                 HStack{
                     Text("Watchlist")
                         .font(.custom("Mulish-SemiBold", size: 14))

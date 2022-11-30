@@ -20,7 +20,11 @@ struct HomeView: View {
                         .font(.custom("Mulish-SemiBold", size: 20))
                         .multilineTextAlignment(.center)
                         .padding(.bottom)
-                    CryptoButtons(buttonText1: "Light Theme", buttonText2: "Dark Theme", getButtonString: {item in
+                    CryptoButtons(elementList:
+                                    ["Light Theme", "Dark Theme"],
+                                      isSelected: {item in
+                        return true},
+                    getButtonString: {item in
                         return item
                     })
                     Spacer()

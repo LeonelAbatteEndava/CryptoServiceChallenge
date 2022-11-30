@@ -30,7 +30,7 @@ struct ProfileView: View {
                     .font(.custom("Mulish-SemiBold", size: 25))
                     .padding()
                 Spacer()
-                GreenButton(buttonText1: "View in GitHub")
+                GreenButton(buttonText: "View in GitHub")
                 Spacer()
             }.padding()
         }
