@@ -21,17 +21,25 @@ struct MarketView: View {
                 }
                 Text("Currency Selection")
                     .font(.custom("Mulish-Bold", size: 20))
-                CryptoButtons(elementList: ["ARS","USD"],
-                              isSelected:{ item in
-                                return true},
-                getButtonString: { item in
-                                return item
-                                })
+                CryptoButtons<Currency>(
+                    elementList: [
+                        Currency(name: "Peso Argentino", code:"ARS", isSelected: true, symbol: "$"),
+                        Currency(name: "Dolar Estadounidense", code:"USD", isSelected: false, symbol: "$")],
+                    isSelected:{ currency in
+                        return currency.isSelected
+                    },
+                    getButtonString: { currency in
+                        return currency.code
+                    },
+                    onNewValue: { currency in
+                        print("On New Currency Selected: \(currency)")
+                    })
                 HStack{
                     Text("Watchlist")
                         .font(.custom("Mulish-SemiBold", size: 14))
                     Spacer()
-                }.padding(.bottom, 8)
+                }
+                .padding(.bottom, 8)
                 VStack(spacing: 8) {
                     CryptoCard()
                     CryptoCard()

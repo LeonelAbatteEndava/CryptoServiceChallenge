@@ -19,14 +19,17 @@ struct CryptoButtons<T>: View {
     var elementList: Array<T>
     var isSelected: ((T) -> Bool)
     var getButtonString: ((T) -> String)
+    var onNewValue: ((T) -> Void)
     
     var body: some View {
             HStack {
                 ForEach(0..<elementList.count){ index in
                     if(isSelected(elementList[index])){
-                        GreenButton(buttonText: getButtonString(elementList[index]))
+                        GreenButton(buttonText: getButtonString(elementList[index]),onButtonTapped: {})
                     }else{
-                        WhiteButton(buttonText: getButtonString(elementList[index]))
+                        WhiteButton(buttonText: getButtonString(elementList[index]),onButtonTapped: {
+                            onNewValue(elementList[index])
+                        })
                     }
                 }
             }
@@ -37,12 +40,10 @@ struct CryptoButtons<T>: View {
 // TODO: Please expose the button action as a lambda function in order to propagate the action to the CryptoButtons widget and can perfoms action when the status change
 struct GreenButton: View {
     var buttonText: String
-    
+    var onButtonTapped: ()-> Void
     
     var body: some View {
-        Button(action: {
-            print("Hola")
-        }) {
+        Button(action: onButtonTapped) {
             Text(buttonText)
                 .bold()
                 .foregroundColor(Color("TextColor1"))
@@ -58,9 +59,10 @@ struct GreenButton: View {
 
 struct WhiteButton: View {
     var buttonText: String
-    
+    var onButtonTapped: ()-> Void
+
     var body: some View {
-        Button(action: { print("HOLA")}){
+        Button(action: onButtonTapped){
             Text(buttonText)
                 .bold()
                 .foregroundColor(Color("TextColor2"))
@@ -74,25 +76,22 @@ struct WhiteButton: View {
     
 }
 
-struct Currency{
-    var nambe: String
-    var code: String
-    var isSelected: Bool
-    var symbol: String
-}
 
 
 struct CryptoButtons_Previews: PreviewProvider {
     static var previews: some View {
         CryptoButtons<Currency>(
             elementList: [
-                Currency(nambe: "Peso Argentino", code:"ARS", isSelected: false, symbol: "$"),
-                Currency(nambe: "Dolar Estadounidense", code:"USD", isSelected: false, symbol: "$")],
-            isSelected: { item in
-                return item.isSelected
+                Currency(name: "Peso Argentino", code:"ARS", isSelected: false, symbol: "$"),
+                Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$")],
+            isSelected: { currency in
+                return currency.isSelected
             },
-            getButtonString: { item in
-                return item.code
-        })
+            getButtonString: { currency in
+                return currency.code
+            },
+            onNewValue: { currency in
+                print("New Selection \(currency)")
+            })
     }
 }

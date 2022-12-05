@@ -20,18 +20,19 @@ struct HomeView: View {
                         .font(.custom("Mulish-SemiBold", size: 20))
                         .multilineTextAlignment(.center)
                         .padding(.bottom)
-                    CryptoButtons(elementList:
-                                    ["Light Theme", "Dark Theme"],
-                                      isSelected: {item in
-                        return true},
-                    getButtonString: {item in
-                        return item
+                    CryptoButtons<Theme>(elementList:
+                                    [ Theme(name: "Light Theme", isSelected: true),
+                                      Theme(name: "Dark Theme", isSelected: false)],
+                    isSelected: {theme in
+                        return theme.isSelected},
+                    getButtonString: {theme in
+                        return theme.name
+                    }, onNewValue: { theme in
+                        print("New Theme Selection \(theme)")
                     })
                     Spacer()
                 }
-
             }
-
         }
     }
 }
