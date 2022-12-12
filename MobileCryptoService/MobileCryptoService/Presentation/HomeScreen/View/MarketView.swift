@@ -40,23 +40,41 @@ struct MarketView: View {
                     Spacer()
                 }
                 .padding(.bottom, 8)
-                VStack(spacing: 8) {
-                    ForEach(0..<5) { item in
-                        CryptoCard<CryptoCurrency>(elementList: [CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 52000, fluctuation: 10.5)],
-                                                   getCardImage: {CryptoCurrency in return CryptoCurrency.image},
-                                                   getCardName: {CryptoCurrency in return CryptoCurrency.name},
-                                                   getCardCode: {CryptoCurrency in return CryptoCurrency.code},
-                                                   getCardCurrency: {CryptoCurrency in return
-                            CryptoCurrency.currency},
-                                                   getPrice: {CryptoCurrency in return
-                            CryptoCurrency.price},
-                                                   getFluctuation: {CryptoCurrency in return
-                            CryptoCurrency.fluctuation})
-                    }
-                    Spacer()
-                }.padding(.top, 0)
-                Spacer()
-            }.padding()
+                CryptoAppList<CryptoCurrency, CardDesign<CryptoCurrency, Group>>(
+                    elementList: [CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 52000, fluctuation: 10.5),
+                                  CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 52000, fluctuation: 10.5)],
+                    itemViewBuilder: { item in
+                        return CardDesign(
+                            item: item,
+                            mapLeadingAvatar: { item in
+                                return item.image
+                            },
+                            mapHeadlineText: {item in
+                                return item.code
+                            },
+                            mapSupportingText: { item in
+                                return item.name
+                            },
+                            mapTraillingSupportedText: { item in
+                                return "\(item.currency.code) \(item.price)"
+                            },
+                            mapTraillingIconBuilder: { item in
+                                return Group{
+                                    HStack{
+                                        Image(systemName: "arrow.up.right")
+                                        Text(String(item.fluctuation))
+                                            .font(.custom("Mulish-Bold", size: 13))
+                                    }.foregroundColor(Color.white)
+                                        .padding(5)
+                                        .background(Rectangle()
+                                            .fill(Color("TextColor2")))
+                                        .cornerRadius(8)
+                                }
+                                
+                            }
+                        )
+                    })
+            }
             
         }
 
