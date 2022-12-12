@@ -16,7 +16,7 @@ struct HomeView: View {
                 VStack {
                     Image("SplashScreen")
                         .padding(71)
-                    Text("Implemented by" + "\nCristian Torrado, 2022")
+                    Text("Implemented by" + "\nLeonel Abatte, 2022")
                         .font(.custom("Mulish-SemiBold", size: 20))
                         .multilineTextAlignment(.center)
                         .padding(.bottom)

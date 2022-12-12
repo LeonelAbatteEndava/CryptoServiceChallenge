@@ -10,7 +10,6 @@ import SwiftUI
 
 struct CryptoButtons<T>: View {
 
-    
     struct ChipElement<T>{
         var item: T
         var uuid = UUID()

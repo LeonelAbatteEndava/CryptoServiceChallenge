@@ -41,11 +41,18 @@ struct MarketView: View {
                 }
                 .padding(.bottom, 8)
                 VStack(spacing: 8) {
-                    CryptoCard()
-                    CryptoCard()
-                    CryptoCard()
-                    CryptoCard()
-                    CryptoCard()
+                    ForEach(0..<5) { item in
+                        CryptoCard<CryptoCurrency>(elementList: [CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 52000, fluctuation: 10.5)],
+                                                   getCardImage: {CryptoCurrency in return CryptoCurrency.image},
+                                                   getCardName: {CryptoCurrency in return CryptoCurrency.name},
+                                                   getCardCode: {CryptoCurrency in return CryptoCurrency.code},
+                                                   getCardCurrency: {CryptoCurrency in return
+                            CryptoCurrency.currency},
+                                                   getPrice: {CryptoCurrency in return
+                            CryptoCurrency.price},
+                                                   getFluctuation: {CryptoCurrency in return
+                            CryptoCurrency.fluctuation})
+                    }
                     Spacer()
                 }.padding(.top, 0)
                 Spacer()

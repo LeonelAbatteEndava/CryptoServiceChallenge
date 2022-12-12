@@ -35,7 +35,7 @@ struct MainNavigationView: View  {
                         Image(systemName: "person")
                         Text("Profile")
                     }
-            }
+            }.accentColor(.green)
             default:
                 Text("Error")
         }

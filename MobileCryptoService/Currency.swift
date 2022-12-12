@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-struct Currency{
+struct Currency {
     var name: String
     var code: String
     var isSelected: Bool

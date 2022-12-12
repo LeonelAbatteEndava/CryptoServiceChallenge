@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D25BA6B2940E0C80081EAF7 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D25BA6A2940E0C80081EAF7 /* CryptoCurrency.swift */; };
 		2D4389972919796500139F08 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4389962919796500139F08 /* ProfileView.swift */; };
 		2D43899A2919798C00139F08 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4389992919798C00139F08 /* MarketView.swift */; };
 		2DA840ED290AD31500EA5F2D /* CryptoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA840EC290AD31500EA5F2D /* CryptoCard.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D25BA6A2940E0C80081EAF7 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
 		2D4389962919796500139F08 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2D4389992919798C00139F08 /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
 		2DA840EC290AD31500EA5F2D /* CryptoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoCard.swift; path = MobileCryptoService/Presentation/SplashScreen/View/CryptoCard.swift; sourceTree = SOURCE_ROOT; };
@@ -157,6 +159,7 @@
 				DB2B2A09293E6F9C00C5AC46 /* Currency.swift */,
 				DB2B2A0B293E73C300C5AC46 /* Theme.swift */,
 				DB2B2A0D293E762D00C5AC46 /* Profile.swift */,
+				2D25BA6A2940E0C80081EAF7 /* CryptoCurrency.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				2DA840ED290AD31500EA5F2D /* CryptoCard.swift in Sources */,
 				2D4389972919796500139F08 /* ProfileView.swift in Sources */,
 				DBED7A1928F9FAB400F826B3 /* States.swift in Sources */,
+				2D25BA6B2940E0C80081EAF7 /* CryptoCurrency.swift in Sources */,
 				DB2B2A0E293E762D00C5AC46 /* Profile.swift in Sources */,
 				DBED7A1D28F9FB7600F826B3 /* MainNavigationView.swift in Sources */,
 				DBED7A1728F9FAA300F826B3 /* MainNavigationViewModel.swift in Sources */,
