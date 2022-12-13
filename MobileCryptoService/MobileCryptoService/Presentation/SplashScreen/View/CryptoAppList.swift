@@ -16,8 +16,9 @@ struct CryptoAppList<T, Content: View>: View {
         List{
             ForEach(0..<elementList.count){ index in
                 itemViewBuilder(elementList[index])
-            }
-        }
+            }.listRowBackground(Color("BackgroundColor"))
+        }.listStyle(.plain)
+            .background(Color("BackgroundColor"))
     }
 }
     
@@ -26,10 +27,10 @@ struct CryptoCard_Previews: PreviewProvider {
     static var previews: some View {
         CryptoAppList<CryptoCurrency, CardDesign<CryptoCurrency, Group>>(
 
-            elementList: [CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 52000, fluctuation: 10.5)],
+            elementList: [CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 5200, fluctuation: 10.5)],
             itemViewBuilder: { item in
                 return CardDesign(
-                    item: CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 52000, fluctuation: 10.5),
+                    item: CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 5200, fluctuation: 10.5),
                     mapLeadingAvatar: { item in
                         return item.image
                     },

@@ -96,6 +96,7 @@ struct CardDesign_Previews: PreviewProvider {
                 }
                 
             ).frame(width: 343, height: 88)
+            
         }
     }
         
