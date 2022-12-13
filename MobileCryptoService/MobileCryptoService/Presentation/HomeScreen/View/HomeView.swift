@@ -9,7 +9,31 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("Home")
+        ZStack {
+            Color("BackgroundColor")
+                .edgesIgnoringSafeArea(.all)
+            VStack{
+                VStack {
+                    Image("SplashScreen")
+                        .padding(71)
+                    Text("Implemented by" + "\nLeonel Abatte, 2022")
+                        .font(.custom("Mulish-SemiBold", size: 20))
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom)
+                    CryptoButtons<Theme>(elementList:
+                                    [ Theme(name: "Light Theme", isSelected: true),
+                                      Theme(name: "Dark Theme", isSelected: false)],
+                    isSelected: {theme in
+                        return theme.isSelected},
+                    getButtonString: {theme in
+                        return theme.name
+                    }, onNewValue: { theme in
+                        print("New Theme Selection \(theme)")
+                    })
+                    Spacer()
+                }
+            }
+        }
     }
 }
 

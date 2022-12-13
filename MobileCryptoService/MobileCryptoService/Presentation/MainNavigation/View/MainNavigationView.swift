@@ -19,7 +19,23 @@ struct MainNavigationView: View  {
                     mainNavigationViewModel.onTimerFinished()
                 })
             case is HomeState:
+            TabView {
                 HomeView()
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text("Home")
+                    }
+                MarketView()
+                    .tabItem {
+                        Image(systemName: "bag")
+                        Text("Market")
+                    }
+                ProfileView()
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("Profile")
+                    }
+            }.accentColor(.green)
             default:
                 Text("Error")
         }
