@@ -24,7 +24,7 @@ struct CryptoButtons<T>: View {
             HStack {
                 ForEach(0..<elementList.count){ index in
                     if(isSelected(elementList[index])){
-                        GreenButton(buttonText: getButtonString(elementList[index]),onButtonTapped: {})
+                        GreenButton(buttonText: getButtonString(elementList[index]),onButtonTapped: {onNewValue(elementList[index])})
                     }else{
                         WhiteButton(buttonText: getButtonString(elementList[index]),onButtonTapped: {
                             onNewValue(elementList[index])

@@ -9,5 +9,6 @@ import Foundation
 
 struct Theme {
     var name: String
+    
     var isSelected: Bool
 }
