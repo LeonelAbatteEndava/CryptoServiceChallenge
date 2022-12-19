@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Theme {
     var name: String
-    
+    var value: UIUserInterfaceStyle
     var isSelected: Bool
 }

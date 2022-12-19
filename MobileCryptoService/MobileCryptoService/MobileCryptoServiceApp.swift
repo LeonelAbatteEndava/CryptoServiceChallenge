@@ -10,11 +10,9 @@ import SwiftUI
 @main
 struct MobileCryptoServiceApp: App {
     
-    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
-    
     var body: some Scene {
         WindowGroup {
-            MainNavigationView(mainNavigationViewModel: MainNavigationViewModel(initialState: InitialState())).environment(\.colorScheme, isDarkMode ? .dark : .light)
+            MainNavigationView(mainNavigationViewModel: MainNavigationViewModel(initialState: InitialState()))
         }
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
+    @ObservedObject var homeViewModel = HomeViewModel()
     
     var body: some View {
         ZStack {
@@ -23,35 +23,18 @@ struct HomeView: View {
                         .font(.custom("Mulish-SemiBold", size: 20))
                         .multilineTextAlignment(.center)
                         .padding(.bottom)
-                    HStack{
-                        CryptoButtons<Theme>(elementList:
-                                        [ Theme(name: "Light Theme", isSelected: true)],
-                        isSelected: {theme in
-                            return theme.isSelected},
-                        getButtonString: {theme in
+                  
+                    CryptoButtons<Theme>(
+                        elementList: homeViewModel.state,
+                        isSelected: { theme in
+                            return theme.isSelected
+                        },
+                        getButtonString: { theme in
                             return theme.name
-                        }, onNewValue: { theme in
-                            if(isDarkMode == true) {
-                                isDarkMode.toggle()
-                                print(isDarkMode)
-                            }
-
+                        },
+                        onNewValue: { theme in
+                            homeViewModel.onNewThemeSelection(selectedTheme: theme)
                         })
-                        CryptoButtons<Theme>(elementList:
-                                        [Theme(name: "Dark Theme", isSelected: false)],
-                        isSelected: {theme in
-                            return theme.isSelected},
-                        getButtonString: {theme in
-                            return theme.name
-                        }, onNewValue: { theme in
-                            if(isDarkMode == false) {
-                                isDarkMode.toggle()
-                                print(isDarkMode)
-                            }
-
-                        })
-                    }
-
                     Spacer()
                 }
             }
