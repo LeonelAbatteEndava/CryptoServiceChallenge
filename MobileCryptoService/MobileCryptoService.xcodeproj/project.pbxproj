@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D256B9A294C2D75004C377A /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D256B99294C2D75004C377A /* ThemeManager.swift */; };
 		2D25BA6B2940E0C80081EAF7 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D25BA6A2940E0C80081EAF7 /* CryptoCurrency.swift */; };
 		2D4389972919796500139F08 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4389962919796500139F08 /* ProfileView.swift */; };
 		2D43899A2919798C00139F08 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4389992919798C00139F08 /* MarketView.swift */; };
@@ -29,7 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D256B99294C2D75004C377A /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		2D25BA6A2940E0C80081EAF7 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
 		2D4389962919796500139F08 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2D4389992919798C00139F08 /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
@@ -253,7 +251,6 @@
 			children = (
 				DBED7A1628F9FAA300F826B3 /* MainNavigationViewModel.swift */,
 				DBED7A1828F9FAB400F826B3 /* States.swift */,
-				2D256B99294C2D75004C377A /* ThemeManager.swift */,
 			);
 			path = VIewModel;
 			sourceTree = "<group>";
@@ -340,7 +337,6 @@
 				DB2B2A0A293E6F9C00C5AC46 /* Currency.swift in Sources */,
 				DB2B2A1029476E9E00C5AC46 /* CardDesign.swift in Sources */,
 				2D43899A2919798C00139F08 /* MarketView.swift in Sources */,
-				2D256B9A294C2D75004C377A /* ThemeManager.swift in Sources */,
 				2DBF521F28F73C8F00A1476B /* MobileCryptoServiceApp.swift in Sources */,
 				DB2B2A0C293E73C300C5AC46 /* Theme.swift in Sources */,
 				2DA840EF290AD58600EA5F2D /* CryptoButtons.swift in Sources */,
