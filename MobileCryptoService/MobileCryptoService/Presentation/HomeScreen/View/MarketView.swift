@@ -18,7 +18,7 @@ struct MarketView: View {
                     Text("Good morning, \nJosé")
                         .font(.custom("Mulish-Bold", size: 20))
                     Spacer()
-                }
+                }.padding()
                 Text("Currency Selection")
                     .font(.custom("Mulish-Bold", size: 20))
                 CryptoButtons<Currency>(
@@ -39,7 +39,6 @@ struct MarketView: View {
                         .font(.custom("Mulish-SemiBold", size: 14))
                     Spacer()
                 }
-                .padding(.bottom, 8)
                 CryptoAppList<CryptoCurrency, CardDesign<CryptoCurrency, Group>>(
                     elementList: [CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 52000, fluctuation: 10.5),
                                   CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 52000, fluctuation: 10.5),                                   CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 52000, fluctuation: 10.5),                                   CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 52000, fluctuation: 10.5),                                   CryptoCurrency(image: "ImageBTC", name: "Bitcoin", code: "BTC/BUSD", currency: Currency(name: "Dolar Estadounidense", code:"USD", isSelected: true, symbol: "$"), price: 52000, fluctuation: 10.5),],
@@ -74,7 +73,7 @@ struct MarketView: View {
                             }
                         )
                     })
-            }.padding()
+            }
         }
     }
 }
@@ -82,5 +81,6 @@ struct MarketView: View {
 struct MarketView_Previews: PreviewProvider {
     static var previews: some View {
         MarketView()
+        MarketView().preferredColorScheme(.dark)
     }
 }

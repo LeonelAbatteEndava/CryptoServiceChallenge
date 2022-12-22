@@ -23,7 +23,7 @@ struct CardDesign<T: Any, Content: View>: View {
                     Spacer().layoutPriority(15)
                     Image(mapLeadingAvatar(item))
                         .frame(maxWidth: .infinity,maxHeight: .infinity).layoutPriority(64)
-                        .padding()
+                        .padding(12)
                         .background(Color("BackgroundColorImage"))
                         .cornerRadius(10)
                     VStack{
@@ -55,7 +55,7 @@ struct CardDesign<T: Any, Content: View>: View {
                     .stroke(Color("BackgroundColor"), lineWidth:0)
                     .shadow(radius: 10)
             )
-            .background(.white)
+            .background(Color("BackgroundColorCard"))
             .cornerRadius(10)
         }
     }

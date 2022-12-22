@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct MobileCryptoServiceApp: App {
+    
     var body: some Scene {
         WindowGroup {
             MainNavigationView(mainNavigationViewModel: MainNavigationViewModel(initialState: InitialState()))
